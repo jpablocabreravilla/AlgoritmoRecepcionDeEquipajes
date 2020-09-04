@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="AppRecepcionDeEquipajes.MainPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+	<StackLayout>
+		<Frame
+			Padding="25"
+			BackgroundColor="#3b5998"
+			CornerRadius="0">
+			<Label
+				FontSize="25"
+				HorizontalTextAlignment="Center"
+				Text="RECEPCION DE EQUIPAJES BOING 747"
+				TextColor="White" />
+		</Frame>
+
+		<Frame Margin="10,5,10,0" BackgroundColor="AliceBlue">
+			<StackLayout Orientation="Vertical">
+				<Label
+					FontSize="25"
+					HorizontalTextAlignment="Center"
+					Text="Espacio en Bodega restante :"
+					TextColor="Black" />
+				<Label
+					x:Name="lbl_ContadorBodega"
+					FontSize="30"
+					HorizontalTextAlignment="Center"
+					Text=" _ _ _ _ _"
+					TextColor="Black" />
+			</StackLayout>
+		</Frame>
+
+		<Label
+			Margin="0,20,0,0"
+			FontSize="Title"
+			HorizontalTextAlignment="Center"
+			Text="Ingrese el peso del bulto : " />
+		<Entry
+			x:Name="entry_Bulto"
+			Margin="30,0"
+			HorizontalTextAlignment="Center"
+			Keyboard="Numeric"
+			Placeholder=" ... Peso en Kg ..." />
+
+		<StackLayout
+			Margin="0,20"
+			HeightRequest="70"
+			HorizontalOptions="CenterAndExpand"
+			Orientation="Horizontal">
+			<Button
+				x:Name="btn_FinalizarCarga"
+				Clicked="btn_FinalizarCarga_Clicked"
+				Text="Finalizar la carga de bultos"
+				WidthRequest="160" />
+			<Button
+				x:Name="btn_IngresarBulto"
+				Clicked="btn_IngresarBulto_Clicked"
+				Text="Ingresar otro bulto"
+				WidthRequest="160" />
+		</StackLayout>
+
+		<StackLayout
+			Margin="0,0,0,30"
+			HorizontalOptions="Center"
+			Orientation="Horizontal"
+			VerticalOptions="Center">
+			<Label
+				FontSize="20"
+				Text=" Precio bulto ingresado:  "
+				TextColor="Black" />
+			<Label
+				x:Name="lbl_PrecioBultoIn"
+				FontSize="20"
+				Text=" _ _ _ "
+				TextColor="Black" />
+		</StackLayout>
+
+		<Frame>
+			<StackLayout HorizontalOptions="Center">
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="total de bultos ingresados para el vuelo : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_ContBultos"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="Peso del bulto más pesado : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_BultoPesas"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="Peso del bulto más liviano : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_BultoLiviano"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="Peso promedio de los bultos : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_PromBultos"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="Ingreso en pesos $ : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_TotalPesos"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+					<Label
+						FontAttributes="Bold"
+						Text="Ingreso en dolares $ : "
+						TextColor="Black" />
+					<Label
+						x:Name="lbl_TotalDolares"
+						FontAttributes="Bold"
+						Text=" _ _ _ _ " />
+				</StackLayout>
+			</StackLayout>
+		</Frame>
+
+		<Button
+			Margin="10,0,10,5"
+			Clicked="Button_Clicked_clear"
+			Text="Limpiar Formulario para cargar otro avion" />
+
+	</StackLayout>
+</ContentPage>
+
